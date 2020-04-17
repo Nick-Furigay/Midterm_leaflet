@@ -18,19 +18,13 @@
 
     <script>
       // initialize the map
-      var cities = L.layerGroup([littleton, denver, aurora, golden]);
+
       var map = L.map("map").setView([39.74, -104.99], 13);
 
       // load a tile layer
-      L.tileLayer(
-        "https://www.arcgis.com/home/webmap/viewer.html?webmap=548bb32483934c56a5433085af76d841",
-        {
-          attribution:
-            'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
-          maxZoom: 17,
-          minZoom: 9,
-        }
-      ).addTo(map);
+      L.tileLayer("DENVER_BASEMAP", {
+        minZoom: 9,
+      }).addTo(map);
     </script>
   </body>
 </html>
